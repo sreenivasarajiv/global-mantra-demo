@@ -1,0 +1,7 @@
+<h1>Create User</h1>
+<form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm.value)" enctype="multipart/form-data">
+  <input name="name" />
+  <input formControlName="name" name="email" type="email" />
+  <input formControlName="email" type="file" (change)="handleFileInput($event.target.files)" />
+  <button type="submit">Create User</button>
+</form>
